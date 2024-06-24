@@ -55,12 +55,6 @@ android {
     }
 }
 
-def getSdkDir() {
-    Properties local = new Properties()
-    local.load(new FileInputStream("${rootDir}/local.properties"))
-    return local.getProperty('sdk.dir')
-}
-
 def BuildIl2Cpp(String workingDir, String configuration, String architecture, String abi, String[] staticLibraries) {
     def commandLineArgs = []
     commandLineArgs.add("--compile-cpp")
@@ -89,7 +83,7 @@ def BuildIl2Cpp(String workingDir, String configuration, String architecture, St
     exec {
         executable workingDir + "/src/main/Il2CppOutputProject/IL2CPP/build/deploy/il2cpp" + executableExtension
         args commandLineArgs
-        environment "ANDROID_SDK_ROOT", getSdkDir()
+        environment "ANDROID_SDK_ROOT"
     }
     delete workingDir + "/src/main/jniLibs/" + abi + "/libil2cpp.sym.so"
     ant.move(file: workingDir + "/src/main/jniLibs/" + abi + "/libil2cpp.dbg.so", tofile: workingDir + "/symbols/" + abi + "/libil2cpp.so")

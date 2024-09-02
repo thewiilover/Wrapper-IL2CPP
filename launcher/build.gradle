@@ -10,20 +10,6 @@ android {
             useLegacyPackaging = true
         }
     }
-    signingConfigs {
-        debug {
-            storeFile file("${System.getProperty("user.dir")}/qcxr.keystore")
-            storePassword "${System.getenv().QCXR_KEYSTORE_PASS}"
-            keyAlias "${System.getenv().QCXR_KEYSTORE_ALIAS}"
-            keyPassword "${System.getenv().QCXR_KEYSTORE_PASS}"
-        }
-        release {
-            storeFile file("${System.getProperty("user.dir")}/qcxr.keystore")
-            storePassword "${System.getenv().QCXR_KEYSTORE_PASS}"
-            keyAlias "${System.getenv().QCXR_KEYSTORE_ALIAS}"
-            keyPassword "${System.getenv().QCXR_KEYSTORE_PASS}"
-        }
-    }
     buildToolsVersion '30.0.3'
 
     compileOptions {
@@ -63,12 +49,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt')
             jniDebuggable true
         }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.release
-        }
-    }
 
     packagingOptions {
         doNotStrip '*/arm64-v8a/*.so'

@@ -70,8 +70,8 @@ android {
             enableSplit = true
         }
     }
+  }
 }
-
 build {
     dependsOn(':build')
 }

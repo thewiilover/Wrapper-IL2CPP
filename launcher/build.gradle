@@ -23,7 +23,7 @@ android {
     
     defaultConfig {
         compileSdkVersion = 32
-        minSdkVersion 29
+        minSdkVersion 32
         targetSdkVersion 32
         applicationId 'com.qcxr.qcxr'
         ndk {

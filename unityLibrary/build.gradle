@@ -32,8 +32,6 @@ android {
             abiFilters 'arm64-v8a'
             stl "c++_shared"
         }
-        versionCode 15
-        versionName '5.0.0'
         consumerProguardFiles 'proguard-unity.txt'
     }
 
@@ -59,7 +57,7 @@ def getSdkDir() {
     Properties local = new Properties()
     String dir
     try {
-        dir = local.load(new FileInputStream("${rootDir}/local.properties")).getProperty('sdk.dir')
+        dir = 'C:\\Users\\Paiton\\AppData\\Local\\Android\\Sdk'
     } catch(FileNotFoundException ex) {
         dir = "${System.getenv().ANDROID_SDK_ROOT}"
     }

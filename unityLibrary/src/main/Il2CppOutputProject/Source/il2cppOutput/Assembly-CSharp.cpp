@@ -15490,21 +15490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JNIStorage_Start_m8CECCB408D345EE87D469D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCB95AC6F5DAF4F3EB9438A7F55847FF126519704);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		// CrashReportHandler.enableCaptureExceptions = false;
-		CrashReportHandler_set_enableCaptureExceptions_m43B6DDC35A11833111069353501CDA7EE2D75351((bool)0, NULL);
-		// instance = this;
-		((JNIStorage_t375A1F8724CA5D597A2FE2AD654C0A9059F8851D_StaticFields*)il2cpp_codegen_static_fields_for(JNIStorage_t375A1F8724CA5D597A2FE2AD654C0A9059F8851D_il2cpp_TypeInfo_var))->___instance_8 = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&((JNIStorage_t375A1F8724CA5D597A2FE2AD654C0A9059F8851D_StaticFields*)il2cpp_codegen_static_fields_for(JNIStorage_t375A1F8724CA5D597A2FE2AD654C0A9059F8851D_il2cpp_TypeInfo_var))->___instance_8), (void*)__this);
-		// if (Microphone.devices.Length != 0)
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0;
-		L_0 = Microphone_get_devices_mC2821E200C36C599DDC37927DEC9EA725240812D(NULL);
-		NullCheck(L_0);
-		if (!(((RuntimeArray*)L_0)->max_length))
-		{
-			goto IL_0028;
-		}
-	}
+
 	{
 		// Microphone.Start(Microphone.devices[0], true, 1, 44100);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1;

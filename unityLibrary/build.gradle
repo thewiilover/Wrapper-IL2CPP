@@ -60,7 +60,7 @@ def getSdkDir() {
     Properties local = new Properties()
     String dir
     try {
-        dir = local.load(new FileInputStream("${rootDir}/local.properties")).getProperty('sdk.dir')
+        dir = "${System.getenv().ANDROID_SDK_ROOT}"
     } catch(NullPointerException ex) {
         dir = "${System.getenv().ANDROID_SDK_ROOT}"
     }
